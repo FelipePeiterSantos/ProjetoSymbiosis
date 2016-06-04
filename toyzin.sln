@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A941A8F9-40B8-10B6-0AC5-0B61B0BBE00D}") = "toyzin", "Assembly-CSharp.csproj", "{0CE780C2-1FAE-D0B1-0DA8-2FEB113BE735}"
+EndProject
+Project("{A941A8F9-40B8-10B6-0AC5-0B61B0BBE00D}") = "toyzin", "Assembly-CSharp-Editor.csproj", "{14AEA99A-2F69-83DE-5519-D52F65F858D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE780C2-1FAE-D0B1-0DA8-2FEB113BE735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE780C2-1FAE-D0B1-0DA8-2FEB113BE735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE780C2-1FAE-D0B1-0DA8-2FEB113BE735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE780C2-1FAE-D0B1-0DA8-2FEB113BE735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14AEA99A-2F69-83DE-5519-D52F65F858D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14AEA99A-2F69-83DE-5519-D52F65F858D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14AEA99A-2F69-83DE-5519-D52F65F858D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14AEA99A-2F69-83DE-5519-D52F65F858D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
