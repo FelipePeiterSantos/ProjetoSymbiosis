@@ -62,8 +62,8 @@ public class cameraOrbitController : MonoBehaviour
 		Vector3 tempOffset;
 
         if (playerControl) {
-            angleH += Mathf.Clamp(Input.GetAxis("Mouse X"), -1, 1) * horizontalAimingSpeed * Time.deltaTime;
-		    angleV += Mathf.Clamp(-Input.GetAxis("Mouse Y"), -1, 1) * verticalAimingSpeed * Time.deltaTime;
+            angleH += Mathf.Clamp(Input.GetAxis("MovementX"), -1, 1) * horizontalAimingSpeed * Time.deltaTime;
+            angleV += Mathf.Clamp(-Input.GetAxis("MovementY"), -1, 1) * verticalAimingSpeed * Time.deltaTime;
             angleV = Mathf.Clamp(angleV, minVerticalAngle, maxVerticalAngle);
             angleH = angleH % 360;
             if(angleH < 0) {

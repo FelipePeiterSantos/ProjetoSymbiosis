@@ -38,7 +38,8 @@ public class characterController : MonoBehaviour {
     }
 
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.Joystick1Button5)) {
+        if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetButton("Fire1"))
+        {
             combo = true;
             cdCombo = 0;
         }
@@ -50,7 +51,8 @@ public class characterController : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Joystick1Button4) && isDoing != actions.hit) {
+        if ((Input.GetKeyDown(KeyCode.Joystick1Button4) || Input.GetButton("Fire2")) && isDoing != actions.hit)
+        {
             StartCoroutine("Parry");
         }
 
@@ -135,7 +137,8 @@ public class characterController : MonoBehaviour {
                     isDoing = actions.dashForward;
                 }
             }
-            else if(Input.GetKeyDown(KeyCode.Joystick1Button5)) {
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetButton("Fire1"))
+            {
                 doAction = actions.combo;
                 isDoing = actions.combo;
                 if (atkForward) {
