@@ -42,6 +42,7 @@ public class cameraOrbitController : MonoBehaviour
 
 	void Awake()
 	{
+        Cursor.lockState = CursorLockMode.Locked;
 		cam = transform;
         playerControl = true;
 

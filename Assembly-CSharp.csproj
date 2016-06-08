@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Toy\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Toy\Scripts\Player.cs" />
+     <Compile Include="Assets\Toy\Scripts\Weapon.cs" />
      <Compile Include="Assets\Toy\Scripts\bulletController.cs" />
      <Compile Include="Assets\Toy\Scripts\cameraLockController.cs" />
      <Compile Include="Assets\Toy\Scripts\cameraOrbitController.cs" />

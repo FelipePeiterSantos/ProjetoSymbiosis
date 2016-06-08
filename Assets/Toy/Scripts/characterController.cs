@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class characterController : MonoBehaviour {
-
+    
+    public Player player;
     public Animator anim;
     public GameObject cameraMain;
     public Transform enemy;
@@ -24,7 +25,9 @@ public class characterController : MonoBehaviour {
     bool hitFeed;
     int cdHitFeed;
 
-    void Start() {
+    void Start()
+    {
+        player = gameObject.GetComponent<Player>();
         doAction = actions.idle;
         isDoing = actions.noAction;
         atkForward = false;
@@ -105,7 +108,7 @@ public class characterController : MonoBehaviour {
         }
 
         if (isDoing == actions.noAction) {
-            if(Input.GetKeyDown(KeyCode.Joystick1Button1)) {
+            if(Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKey("space")) {
                 if(atkForward) {
                     if (Input.GetAxis("Vertical") >= 0.5f) {
                         transform.LookAt(new Vector3(target.position.x,transform.position.y,target.position.z));
@@ -275,6 +278,7 @@ public class characterController : MonoBehaviour {
 	void OnTriggerEnter(Collider coll) {
         if(coll.gameObject.layer == LayerMask.NameToLayer("weapon") && hitbox.activeSelf) {
             StartCoroutine("Hit");
+            player.Hit(coll.GetComponentInParent<enemyController>().lightDmg);
         }
         else if(coll.gameObject.layer == LayerMask.NameToLayer("weapon") && parry.activeSelf) {
             coll.BroadcastMessage("Parred");
